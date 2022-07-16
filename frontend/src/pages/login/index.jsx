@@ -69,7 +69,7 @@ const Login = (props) => {
               </div>
               <div className="row pt-5 pb-5">
                 <div className="d-grid gap-2 col-sm-2 mx-auto">
-                  <input className="btn btna btn-success me-md-2 fs-3" type={'submit'}/>
+                  <input className="btn btna btn-success me-md-2 fs-3" type={'submit'} />
                 </div>
               </div>
             </div>
