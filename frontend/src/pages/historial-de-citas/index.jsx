@@ -1,7 +1,27 @@
 import React from 'react'
 import './index.css'
+import { useState } from 'react';
+import hc_1 from '../../assets/hc_1.jpg'
+import hc_2 from '../../assets/hc_2.jpg'
+import hc_3 from '../../assets/hc_3.jpg'
 
 const HistorialDeCitas = (props) => {
+  const [newImg, setNewImg] = useState(null)
+    function Dia(){
+        setNewImg(
+            newImg => <img src={imagen1} alt=""/>
+        )
+    }
+    function Semana(){
+        setNewImg(
+            newImg => <img src={imagen2} alt=""/>
+        )
+    }
+    function Mes(){
+        setNewImg(
+            newImg => <img src={imagen3} alt=""/>
+        )
+    }
   return (
     <>
       <header>
@@ -23,26 +43,14 @@ const HistorialDeCitas = (props) => {
               Frecuencia
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Dia
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Semana
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Mes
-                </a>
-              </li>
+                <li><a className="dropdown-item" href="#" onClick={Dia}>Dia</a></li>
+                <li><a className="dropdown-item" href="#" onClick={Semana}>Semana</a></li>
+                <li><a className="dropdown-item" href="#" onClick={Mes}>Mes</a></li>
             </ul>
           </div>
         </div>
         <div className="gra_hist">
-          <img src={require('../../assets/frecuencia_cita.jpg')} alt="" />
+          {newImg}
         </div>
       </main>
     </>
