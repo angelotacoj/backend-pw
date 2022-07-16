@@ -6,20 +6,20 @@ import hc_2 from '../../assets/hc_2.jpg'
 import hc_3 from '../../assets/hc_3.jpg'
 
 const HistorialDeCitas = (props) => {
-  const [newImg, setNewImg] = useState(null)
+  const [newImg, setNewImg] = useState(<img src={hc_1} alt=""/>)
     function Dia(){
         setNewImg(
-            newImg => <img src={imagen1} alt=""/>
+            newImg => <img src={hc_1} alt=""/>
         )
     }
     function Semana(){
         setNewImg(
-            newImg => <img src={imagen2} alt=""/>
+            newImg => <img src={hc_2} alt=""/>
         )
     }
     function Mes(){
         setNewImg(
-            newImg => <img src={imagen3} alt=""/>
+            newImg => <img src={hc_3} alt=""/>
         )
     }
   return (
