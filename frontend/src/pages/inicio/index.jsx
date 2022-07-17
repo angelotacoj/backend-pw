@@ -33,7 +33,7 @@ const Inicio = () => {
                           <div className="mt-4 mb-2">
                             <CardOption
                               tituloBoton="Historial citas"
-                              href="historial-de-citas"
+                              href="inicio-pac"
                               image={require('../../assets/historial_citas.jpg')}
                             />
                           </div>
