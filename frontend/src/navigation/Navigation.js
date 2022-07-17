@@ -32,6 +32,10 @@ const routes = [
     element: lazy(() => import('../pages/inicio'))
   },
   {
+    path: 'inicio-pac',
+    element: lazy(() => import('../pages/inicio-paciente'))
+  },
+  {
     path: 'proximas-citas',
     element: lazy(() => import('../pages/proximas-citas'))
   },
