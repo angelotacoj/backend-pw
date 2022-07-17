@@ -4,7 +4,7 @@ import './index.css'
 import BodyPM from "./components/BodyPM"
 import foto from "../../assets/medico.png"
 
-
+//comment prueba 
 const PuntuarMedico = () => {
     return <>
         <div className="card mb-5"  id="encabezado">
