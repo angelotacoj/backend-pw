@@ -18,6 +18,7 @@ const RegistroPaciente = (props) => {
     }
     setLoading(false)
   }
+
   return (
     <Formik
       initialValues={{

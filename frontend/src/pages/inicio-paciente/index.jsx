@@ -3,6 +3,7 @@ import React from 'react'
 import paciente from '../../assets/1430453.png'
 import Articulo_INP from "./Articulo_INP"
 import OpcionesEspecialidad_INP from './OpcionesEspecialidad_INP'
+import NavigationTo from '../../componets/NavigationTo'
 
 
 const InicioPaciente = () => {
@@ -115,7 +116,7 @@ const InicioPaciente = () => {
                                     <ul class="dropdown-menu">
                                     <li><a class="dropdown-item fs-5 color_letra" href="/buzon/buzon.html">Buzon privado</a></li>
                                     <li><div class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item fs-5 color_letra" href="/bandeja/Bandeja_de_entrada.html">Bandeja publica</a></li>
+                                    <li><NavigationTo class="dropdown-item fs-5 color_letra" href="/bandejas">Bandeja publica</NavigationTo></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -154,7 +155,7 @@ const InicioPaciente = () => {
                             <div class="row mx-auto">
                                 <div class="col">
                                     <h5 class="sm-3"><a href="/HistorialCitas/HistorialCitas.html"> Historial de citas: </a> </h5>
-                                    <div> Filtrar por:</div>    
+                                    <div> Filtrar por: </div>    
                         <div class="fw-bold mt-2">Especialidad:</div>        
                         <div class="mb-5">
                         <select value={especialidadSeleccionada} className="form-select"  onChange={onEspecialidadSeleccionadaChange}>

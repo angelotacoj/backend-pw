@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import Calendar from '../../componets/Calendar'
 import './index.css'
 
 const PreguntasPacientes = (props) => {
@@ -12,7 +13,7 @@ const PreguntasPacientes = (props) => {
         <h2 className="header_titles">Calendario de citas</h2>
       </header>
       <main>
-        <div className="btn_cal_citas">
+        {/* <div className="btn_cal_citas">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +343,8 @@ const PreguntasPacientes = (props) => {
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> */}
+        <Calendar/>
       </main>
     </>
   )
