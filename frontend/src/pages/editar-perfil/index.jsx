@@ -53,9 +53,9 @@ const Pagina_EP = () => {
                     <div className="card-header encabezadoPerfil">
                         <h4>
                             <div>
-                                <a href="/InicioPaciente/InicioPaciente.html">Principal</a>
+                                <NavigationTo href="/inicio-paciente">Principal</NavigationTo>
                                 /
-                                <a href="/EditarPerfil/Perfil.html">EditarPerfil</a>
+                                <NavigationTo href="#">EditarPerfil</NavigationTo>
                             </div>
                         </h4>
                         <h1 id="LetraHeader">EDITAR PERFIL</h1>
@@ -107,7 +107,7 @@ const Pagina_EP = () => {
 
                     <div className="Boton">
                         <button id="BotonGuardar" className="mt-5 btn btn--outline-secondary" onClick={registrarPacienteOnClick} type="button">
-                            <a id="LetraGuardar" href="/InicioPaciente/InicioPaciente.html">Guardar</a>
+                            <NavigationTo id="LetraGuardar" href="/inicio-paciente">Guardar</NavigationTo>
                         </button>
                     </div>
                 </div>

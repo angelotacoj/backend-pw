@@ -3,6 +3,7 @@ import CuadroFiltrar from './components/CuadroFiltrar.component'
 import CuadroMedicos from './components/CuadroMedicos.component'
 import paciente from '../../assets/paciente.png'
 import './index.css'
+import NavigationTo from '../../componets/NavigationTo'
 
 const BuscarMedico = _ => {
     const ListaEspecialidades = ["Especialidad 1","Especialidad 2","Especialidad 3","Especialidad 4","Especialidad 5"]
@@ -13,10 +14,9 @@ const BuscarMedico = _ => {
             <div className="row">
                 <div className="col">
                     <div className="fs-5 ms-4">
-                        <a className="link" href="/InicioPaciente/InicioPaciente.html">Principal</a>
+                        <NavigationTo className="link" href="/inicio-paciente">Principal</NavigationTo>
                         /
-                       {/*aqui habia un link*/}
-                            <a className="link" href="/Buscaredico/BuscarMedico.html">Buscar medico</a>
+                        <NavigationTo className="link" href="#">Buscar medico</NavigationTo>
                     
                     </div>
                     <div className="mt-2 mb-2 ms-4 fw-bold fs-1" id="divNombreEmpresa">

@@ -10,20 +10,20 @@ const Pagina_ID = () => {
         <section>
             <header>
                 <div className="header_subtitles">
-                    <a href="/inicioMedico/inicioMedico.html">Principal</a>
+                    <NavigationTo className="link" href="/inicio-paciente">Principal</NavigationTo>
                     /
-                    <a href="/BuscarMedico/BuscarMedico.html">Buscar médico</a>
+                    <NavigationTo href="/buscar-medico">Buscar médico</NavigationTo>
                     /
-                    <a href="#">Nombre del médico</a>
+                    <NavigationTo href="#">Nombre del médico</NavigationTo>
                 </div>
                 <h2 className="header_titles">Información del médico</h2>
             </header>
             <main>
                 <section>
                     <div className="btn_retroceder">
-                        <a href="/BuscarMedico/BuscarMedico.html">
+                        <NavigationTo href="buscar-medico">
                             <button type="button" className="btn btn-secondary color-buttons">Retroceder</button>
-                        </a>
+                        </NavigationTo>
                     </div>
                     <div className="card_info">
                         <span>
@@ -37,11 +37,11 @@ const Pagina_ID = () => {
                             <div>Ubicación de consulta: Manuel Olguin 1050</div>
                         </span>
                         <span>
-                            <a href="/mensaje_privado/crear_mensaje_privado.html">
+                            <NavigationTo href="/mensajes-privados">
                                 <div className="card_info_msg">
                                     <img src={mail} alt="" />
                                 </div>
-                            </a>
+                            </NavigationTo>
                         </span>
                     </div>
                     <div className="card_prices">

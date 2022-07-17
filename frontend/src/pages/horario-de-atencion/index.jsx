@@ -11,13 +11,11 @@ const HorarioDeAtencion = (props) => {
         <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
           <div>
             <div className="container">
-              <a href="/" id="link-header">
-                Medico
-              </a>
+              <NavigationTo href="/inicio">Médico</NavigationTo>
               /
-              <a href="#" id="link-header">
+              <NavigationTo href="#" id="link-header">
                 Editable
-              </a>
+              </NavigationTo>
             </div>
             <div className="container">
               <h2 className="header_titles" id="letra">

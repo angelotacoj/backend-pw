@@ -1,17 +1,18 @@
 import HistMed_IPM from "./components/HistMed_IPM"
 import React from 'react'
 import './index.css'
+import NavigationTo from "../../componets/NavigationTo"
 
 const Pagina_IPM = () => {
     return (
         <div>
             <header>
                 <div className="header_subtitles">
-                    <a href="/inicioMedico/inicioMedico.html">Médico</a>
+                    <NavigationTo href="/inicio">Médico</NavigationTo>
                     /
-                    <a href="/cal_citas_med/cal_citas_med.html">Calendario de citas</a>
+                    <NavigationTo href="/calendario-de-citas">Calendario de citas</NavigationTo>
                     /
-                    <a href="#">Información del paciente</a>
+                    <NavigationTo href="#">Información del paciente</NavigationTo>
                 </div>
                 <h2 className="header_titles">INFORMACIÓN DEL PACIENTE</h2>
             </header>

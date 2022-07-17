@@ -116,8 +116,8 @@ const HistMed_IPM = () =>{
                                 <h6 className="modal-title id=staticBackdropLabel" >¿Desea agregar una cita adicional?</h6>
                                 </div>
                                 <div className="modal-footer flex-row">
-                                    <a href="../registrar_cita_med/registrar_cita_med.html"><button type="button" className="btn btn-success" data-bs-dismiss="modal">Sī, agregar</button></a> 
-                                    <a href="/inicioMedico/inicioMedico.html"><button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Finalizar atención</button></a> 
+                                    <NavigationTo href="/registrar-cita-medico"><button type="button" className="btn btn-success" data-bs-dismiss="modal">Sī, agregar</button></NavigationTo> 
+                                    <NavigationTo href="/inicio"><button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Finalizar atención</button></NavigationTo> 
                                 </div>
                             </div>
                             </div>

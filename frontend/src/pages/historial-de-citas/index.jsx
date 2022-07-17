@@ -26,7 +26,7 @@ const HistorialDeCitas = (props) => {
     <>
       <header>
         <div className="header_subtitles">
-          <a href="/">Médico</a>/<a href="/historial-de-citas">Historial de citas</a>
+          <NavigationTo href="/inicio">Médico</NavigationTo>/<NavigationTo href="#">Historial de citas</NavigationTo>
         </div>
         <h2 className="header_titles">HISTORIAL DE CITAS</h2>
       </header>

@@ -8,12 +8,12 @@ const Pagina_BUZ = () => {
                 <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
                     <div>
                         <div>
-                            <a className="nave ms-4" href="/InicioPaciente/InicioPaciente.html" id="letra">
+                            <NavigationTo className="nave ms-4" href="inicio-paciente" id="letra">
                                 Paciente /
-                            </a>
-                            <a className="nave" href="#" id="letra">
+                            </NavigationTo>
+                            <NavigationTo className="nave" href="#" id="letra">
                                 Buzón Privado
-                            </a>
+                            </NavigationTo>
                         </div>
                         <div className="ms-4">
                             <span className="navbar-brand h1" id="letra3">Buzón Privado</span>
@@ -25,8 +25,8 @@ const Pagina_BUZ = () => {
             <section>
                 <div>
                     <div className="d-flex row justify-content-between">
-                        <div className="col"><a href="/mensaje_privado/crear_mensaje_privado.html"><button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons">Crear Mensaje</button></a></div>
-                        <div className="col d-flex flex-row-reverse"><a href="/InicioPaciente/InicioPaciente.html"><button id="button_id" type="button" className="btn btn-primary btn-lg color-buttons">Regresar</button></a> </div>
+                        <div className="col"><NavigationTo href="/mensajes-privados"><button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons">Crear Mensaje</button></NavigationTo></div>
+                        <div className="col d-flex flex-row-reverse"><NavigationTo href="/inicio-paciente"><button id="button_id" type="button" className="btn btn-primary btn-lg color-buttons">Regresar</button></NavigationTo> </div>
                     </div>
                 </div>
             </section>

@@ -32,9 +32,9 @@ const HistorialCitas = () => {
             <div className="mb-5 encabezado">
                 <div className="card-header encabezado">
                     <div className="fs-5 ms-2">
-                        <a className="link" href="/InicioPaciente/InicioPaciente.html">Principal</a>
+                        <NavigationTo className="link" href="/inicio-paciente">Principal</NavigationTo>
                         /
-                        <a className="link" href="/HistorialCitas/HistorialCitas.html">Mis citas</a>
+                        <NavigationTo className="link" href="/#">Historial Citas</NavigationTo>
                     </div>
                     <div className="mt-2 mb-2 ms-2 fw-bold fs-1">
                         HISTORIAL CITAS
