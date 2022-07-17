@@ -16,7 +16,7 @@ const Pagina_RC = () => {
     }
 
     return (
-        <body >
+        <div >
             <div className="card fondo">
                 <div className="card-header fondocabecera">
                     <h1 className="perfil_login">EMPRESA XYZ</h1>
@@ -60,7 +60,7 @@ const Pagina_RC = () => {
                 </div>
             </div>
             
-        </body>
+        </div>
     )
 }
 

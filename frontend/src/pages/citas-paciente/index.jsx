@@ -1,4 +1,3 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Main_CP from "./components/Main_CP"
 import React from 'react'
 import './index.css'
@@ -31,9 +30,9 @@ const Historial = [
 
 const ArmarBody = () => {
     const ListaCita = []
-    Historial.forEach((cita) => {
+    Historial.forEach((cita,index) => {
         ListaCita.push(
-            <Main_CP cita = {cita}/>
+            <Main_CP key={`${index}`} cita = {cita}/>
         )
     })
     return ListaCita

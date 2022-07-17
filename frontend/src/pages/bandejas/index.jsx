@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import user from '../../assets/1430453.png'
 
 const Pagina_BAND = () => {
     return (

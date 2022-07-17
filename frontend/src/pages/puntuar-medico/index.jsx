@@ -1,4 +1,3 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import React from 'react'
 import './index.css'
 import BodyPM from "./components/BodyPM"
@@ -12,9 +11,7 @@ const PuntuarMedico = () => {
                 <div className="fs-5 ms-2">
                     <a className="link" href="/InicioPaciente/InicioPaciente.html">Principal</a>
                     /
-                    {<div to="/iniciopaciente/BuscarMedico">
-                        <a className="link" href="/HistorialCitas/HistorialCitas.html">Buscar Médico</a>
-                    </div>}
+                    <a className="link" href="/HistorialCitas/HistorialCitas.html">Buscar Médico</a>
                     /
                     <a className="link" href="/HistorialCitas/HistorialCitas.html">Puntuar Médico</a>
                 </div>

@@ -1,6 +1,3 @@
-import '../../css/IPM/info_pac_med.css'
-import '../../css/IPM/main.css'
-
 const HistMed_IPM = () =>{
     return(
         <section>
@@ -29,12 +26,15 @@ const HistMed_IPM = () =>{
                     </div>
                     <div className="table-responsive">
                         <table className="table text-center">
+                            <thead>
                         <tr>
                             <th>Medico</th>
                             <th>Fecha de Atención</th>
                             <th className="diagnostico_head" >Diagnostico</th>
                             <th>Medicina recetada</th>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>APELLIDOS, NOMBRES <p>Especialidad</p></td>
                             <td>DD MM YY | Hora</td>
@@ -85,6 +85,7 @@ const HistMed_IPM = () =>{
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
                             </td>
                         </tr>
+                        </tbody>
                         </table>
                         
                     </div>
@@ -107,7 +108,7 @@ const HistMed_IPM = () =>{
                 <div className="btn_info_pac mt-4 mb-4">
                     
                     <button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Culminar cita</button>
-                        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div className="modal-dialog">
                             <div className="modal-content">
                                 <div className="modal-header justify-content-center flex-column">

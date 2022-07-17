@@ -54,7 +54,7 @@ a:visited{
 }    
 
 #BotonPagar{
-    color:aliceblue;
+    color: white !important;
     background-color: #00838F;
     width: 100px;
     margin-bottom: 100px;
@@ -68,6 +68,9 @@ a:visited{
 }
 
 #pagar:visited {
+    color: white;
+}
+#pagar {
     color: white;
 }
 

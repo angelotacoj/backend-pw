@@ -1,6 +1,8 @@
-import CalDoc_ID from "../components/ID/CalDoc_ID"
-import ComDoc_ID from "../components/ID/ComDoc_ID"
+import CalDoc_ID from "./components/CalDoc_ID"
+import ComDoc_ID from "./components/ComDoc_ID"
 import React from 'react'
+import mail from '../../assets/mail.png'
+import doctor from '../../assets/medico.png'
 import './index.css'
 
 const Pagina_ID = () => {

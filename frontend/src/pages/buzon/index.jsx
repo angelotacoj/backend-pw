@@ -56,6 +56,7 @@ const Pagina_BUZ = () => {
                         </div>
                         <div className="table-responsive pe-4 fondo_card">
                             <table className="table text-center fondo_card letra2 ">
+                                <thead>
                                 <tr>
                                     <th>Asunto</th>
                                     <th>Remitente</th>
@@ -63,6 +64,8 @@ const Pagina_BUZ = () => {
                                     <th className="diagnostico_head" >Mensaje</th>
 
                                 </tr>
+                                </thead>
+                                <tbody>
                                 <tr>
                                     <td >Asunto</td>
                                     <td>
@@ -75,7 +78,7 @@ const Pagina_BUZ = () => {
                                 </tr>
                                 <tr>
                                     <td>Asunto</td>
-                                    <td className>
+                                    <td>
                                         APELLIDOS, NOMBRES
                                     </td>
                                     <td>DD MM YY | Hora</td>
@@ -85,7 +88,7 @@ const Pagina_BUZ = () => {
                                 </tr>
                                 <tr>
                                     <td>Asunto</td>
-                                    <td className>
+                                    <td>
                                         APELLIDOS, NOMBRES
                                     </td>
                                     <td>DD MM YY | Hora</td>
@@ -95,7 +98,7 @@ const Pagina_BUZ = () => {
                                 </tr>
                                 <tr>
                                     <td>Asunto</td>
-                                    <td className>
+                                    <td>
                                         APELLIDOS, NOMBRES
                                     </td>
                                     <td>DD MM YY | Hora</td>
@@ -113,6 +116,7 @@ const Pagina_BUZ = () => {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
                                     </td>
                                 </tr>
+                                </tbody>
                             </table>
 
                         </div>

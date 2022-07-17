@@ -4,7 +4,7 @@ import amex from "../../assets/amex.png"
 import diner from "../../assets/diner.png"
 import mastercard from "../../assets/masterca.png"
 import visa from "../../assets/visa.png"
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+//import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const Pagina_TP = () => {
         const [numeroTarjeta, setNumeroTarjeta] = React.useState("")

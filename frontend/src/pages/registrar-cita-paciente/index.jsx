@@ -1,8 +1,8 @@
-import Calen_RCM from "./components/Calen_RCM"
+import Calen_RCP from "./components/Calen_RCP"
 import doctor from '../../assets/medico.png'
 import "./index.css"
 
-const Pagina_RCM = () => {
+const Pagina_RCP = () => {
     return (
         <main>
             <section>
@@ -29,7 +29,7 @@ const Pagina_RCM = () => {
                     </span>
                 </div>
             </section>
-            <Calen_RCM />
+            <Calen_RCP />
             <section>
                 <div className="register">
                     <button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reservar cita</button>
@@ -52,4 +52,4 @@ const Pagina_RCM = () => {
         </main>
     )
 }
-export default Pagina_RCM
+export default Pagina_RCP

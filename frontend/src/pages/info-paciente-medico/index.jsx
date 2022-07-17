@@ -4,7 +4,7 @@ import './index.css'
 
 const Pagina_IPM = () => {
     return (
-        <body>
+        <div>
             <header>
                 <div className="header_subtitles">
                     <a href="/inicioMedico/inicioMedico.html">Médico</a>
@@ -37,7 +37,7 @@ const Pagina_IPM = () => {
                     <div>
                         <div className="form-floating">
                             <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea"></label>
+                            <label htmlFor="floatingTextarea"></label>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const Pagina_IPM = () => {
                     <div>
                         <div className="form-floating">
                             <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea"></label>
+                            <label htmlFor="floatingTextarea"></label>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Pagina_IPM = () => {
                     <div>
                         <div className="form-floating">
                             <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea"></label>
+                            <label htmlFor="floatingTextarea"></label>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ const Pagina_IPM = () => {
         </section>
                 <HistMed_IPM/>
             </main>
-        </body>
+        </div>
     )
 }
 

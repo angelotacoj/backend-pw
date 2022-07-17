@@ -1,4 +1,3 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import React from 'react'
 import './index.css'
 
@@ -17,11 +16,11 @@ const Pagina_MPUB = () => {
                                 Preguntas /
                             </a>
                             <a className="nave" href="#" id="letra">
-                                Preguntas P&uacute;blicas
+                                Preguntas Públicas
                             </a>
                         </div>
                         <div className="ms-4">
-                            <span className="navbar-brand h1" id="letra3">Crear Mensaje P&uacute;blico</span>
+                            <span className="navbar-brand h1" id="letra3">Crear Mensaje Público</span>
                         </div>
                     </div>
                 </nav>

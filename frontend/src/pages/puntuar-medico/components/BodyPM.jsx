@@ -1,43 +1,43 @@
 const BodyPM = (props) => {
     return <>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha385-AYmEC3Yw5cVb3ZcuHt0A93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <div class="row cuerpo">
-        <div class="col"></div>
-        <div class="col-6">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col text-end" id="divImgMedico">
-                    <img class="imgMedico" src={props.foto} alt="Foto medico"></img>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha385-AYmEC3Yw5cVb3ZcuHt0A93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
+        <div className="row cuerpo">
+        <div className="col"></div>
+        <div className="col-6">
+            <div className="row">
+                <div className="col"></div>
+                <div className="col text-end" id="divImgMedico">
+                    <img className="imgMedico" src={props.foto} alt="Foto medico"></img>
                 </div>
-                <div class="col-5">
-                    <div class="fs-2 fw-bold">Nombre médico</div>
+                <div className="col-5">
+                    <div className="fs-2 fw-bold">Nombre médico</div>
                     <div>
-                        <span class="fs-4">Especialidad:</span>
+                        <span className="fs-4">Especialidad:</span>
                         &nbsp;
-                        <span class="fs-5">#######</span>
+                        <span className="fs-5">#######</span>
                     </div>
-                    <div class="fs-4">Calificar:</div>
+                    <div className="fs-4">Calificar:</div>
                 </div>
-                <div class="col"></div>
+                <div className="col"></div>
             </div>
         </div>
-        <div class="col"></div>
+        <div className="col"></div>
     </div>
     
-    <div class="text-center mt-3">
-        <span class="fa fa-star" id="estrella1"></span>
-        <span class="fa fa-star" id="estrella2"></span>
-        <span class="fa fa-star" id="estrella3"></span>
-        <span class="fa fa-star" id="estrella4"></span>
-        <span class="fa fa-star" id="estrella5"></span>
+    <div className="text-center mt-3">
+        <span className="fa fa-star" id="estrella1"></span>
+        <span className="fa fa-star" id="estrella2"></span>
+        <span className="fa fa-star" id="estrella3"></span>
+        <span className="fa fa-star" id="estrella4"></span>
+        <span className="fa fa-star" id="estrella5"></span>
     </div>
-    <div class="text-center mt-4">
+    <div className="text-center mt-4">
         <textarea placeholder="Añadir comentario (opcional)" id="comentario" cols="50" rows="5"></textarea>
     </div>
-    <div class="text-center mt-4">
+    <div className="text-center mt-4">
         <form method="get" action="/BuscarMedico/BuscarMedico.html">
             {<div to="/iniciopaciente/BuscarMedico">
-                <button class="btn btn-outline-info">Aceptar</button>
+                <button className="btn btn-outline-info">Aceptar</button>
             </div>}
         </form>
     </div>
