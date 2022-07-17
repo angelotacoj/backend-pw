@@ -130,8 +130,8 @@ const RegistroMedico = (props) => {
                   />
                   <Input
                     label={'Num. Documento'}
-                    onChange={handleChange('document')}
-                    value={values.document}
+                    onChange={handleChange('dni')}
+                    value={values.dni}
                   />
                   <Input
                     label={'Contraseña :'}
@@ -147,7 +147,7 @@ const RegistroMedico = (props) => {
                   />
 
                   <div className="row align-items-center justify-content-center pt-5 pb-2">
-                    <div className="d-grid gap-2 col-sm-2 mb-3">
+                  <div className="d-grid gap-2 col-sm-2 mb-3">
                       <input className="btn btn-success" type="submit"></input>
                     </div>
                     <div className="d-grid gap-2 col-sm-2 mb-3">
