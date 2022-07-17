@@ -60,6 +60,38 @@ const routes = [
     element: lazy(() => import('../pages/calendario-de-citas'))
   },
   {
+    path: 'medios-de-pago',
+    element: lazy(() => import('../pages/medios-de-pago'))
+  },
+  {
+    path: 'mensajes-privados',
+    element: lazy(() => import('../pages/mensajes-privados'))
+  },
+  {
+    path: 'mensajes-publicos',
+    element: lazy(() => import('../pages/mensajes-publicos'))
+  },
+  {
+    path: 'puntuar-medico',
+    element: lazy(() => import('../pages/puntuar-medico'))
+  },
+  {
+    path: 'recuperar-contrasena',
+    element: lazy(() => import('../pages/recuperar-contrasena'))
+  },
+  {
+    path: 'registrar-cita-medico',
+    element: lazy(() => import('../pages/registrar-cita-medico'))
+  },
+  {
+    path: 'registrar-cita-paciente',
+    element: lazy(() => import('../pages/registrar-cita-paciente'))
+  },
+  {
+    path: 'tarjeta-pago',
+    element: lazy(() => import('../pages/tarjeta-pago'))
+  },
+  {
     path: '*',
     element: () => <Navigate to={'/'} />
   }
