@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import user from '../../assets/1430453.png'
+import NavigationTo from '../../componets/NavigationTo'
 
 const Pagina_BAND = () => {
     return (
@@ -9,15 +10,15 @@ const Pagina_BAND = () => {
                 <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
                     <div>
                         <div>
-                            <a className="nave ms-4" href="/InicioPaciente/InicioPaciente.html" id="letra">
+                            <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
                                 Paciente /
-                            </a>
-                            <a className="nave" href="#" id="letra">
+                            </NavigationTo>
+                            <NavigationTo className="nave" href="#" id="letra">
                                 Preguntas /
-                            </a>
-                            <a className="nave" href="#" id="letra">
+                            </NavigationTo>
+                            <NavigationTo className="nave" href="#" id="letra">
                                 Bandeja pública
-                            </a>
+                            </NavigationTo>
                         </div>
                         <div className="ms-4">
                             <span className="navbar-brand h1" id="letra3">Bandeja pública</span>
@@ -29,8 +30,8 @@ const Pagina_BAND = () => {
             <section>
                 <div >
                     <div className="d-flex row justify-content-between">
-                        <div className="col"><a href="/mensaje_publico/crear_mensaje_publico.html"><button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons">Crear Mensaje</button></a></div>
-                        <div className="col d-flex flex-row-reverse"><a href="/InicioPaciente/InicioPaciente.html"><button id="button_id" type="button" className="btn btn-primary btn-lg color-buttons">Regresar</button></a> </div>
+                        <div className="col"><NavigationTo href="/mensajes-publicos"><button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons">Crear Mensaje</button></NavigationTo></div>
+                        <div className="col d-flex flex-row-reverse"><NavigationTo href="/inicio-paciente"><button id="button_id" type="button" className="btn btn-primary btn-lg color-buttons">Regresar</button></NavigationTo> </div>
                     </div>
                 </div>
             </section>

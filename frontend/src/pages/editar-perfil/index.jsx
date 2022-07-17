@@ -1,5 +1,5 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
+import React from "react"
 const Pagina_EP = () => {
     const [nombrePaciente, setNombrePaciente] = React.useState("")
     const [apellidosPaciente, setApellidosPaciente] = React.useState("")
