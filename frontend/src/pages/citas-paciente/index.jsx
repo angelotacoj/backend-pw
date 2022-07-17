@@ -1,6 +1,7 @@
 import Main_CP from "./components/Main_CP"
 import React from 'react'
 import './index.css'
+import NavigationTo from "../../componets/NavigationTo"
 
 const Historial = [
     {   medico:"Dr. AUGEDA PACHECO, GABRIEL",

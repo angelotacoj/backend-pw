@@ -4,6 +4,7 @@ import React from 'react'
 import mail from '../../assets/mail.png'
 import doctor from '../../assets/medico.png'
 import './index.css'
+import NavigationTo from "../../componets/NavigationTo"
 
 const Pagina_ID = () => {
     return (

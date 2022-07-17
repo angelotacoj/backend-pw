@@ -1,5 +1,6 @@
 import "./index.css"
 import React from "react"
+import NavigationTo from "../../componets/NavigationTo"
 const Pagina_EP = () => {
     const [nombrePaciente, setNombrePaciente] = React.useState("")
     const [apellidosPaciente, setApellidosPaciente] = React.useState("")

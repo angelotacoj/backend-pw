@@ -4,6 +4,7 @@ import { useState } from 'react';
 import hc_1 from '../../assets/hc_1.jpg'
 import hc_2 from '../../assets/hc_2.jpg'
 import hc_3 from '../../assets/hc_3.jpg'
+import NavigationTo from '../../componets/NavigationTo';
 
 const HistorialDeCitas = (props) => {
   const [newImg, setNewImg] = useState(<img src={hc_1} alt=""/>)

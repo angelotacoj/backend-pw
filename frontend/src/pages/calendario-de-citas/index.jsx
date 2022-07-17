@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Calendar from '../../componets/Calendar'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 const PreguntasPacientes = (props) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 const Pagina_BUZ = () => {
@@ -8,7 +9,7 @@ const Pagina_BUZ = () => {
                 <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
                     <div>
                         <div>
-                            <NavigationTo className="nave ms-4" href="inicio-paciente" id="letra">
+                            <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
                                 Paciente /
                             </NavigationTo>
                             <NavigationTo className="nave" href="#" id="letra">

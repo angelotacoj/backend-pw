@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import ButtonModal from './components/ButtonModal'
+import NavigationTo from '../../componets/NavigationTo'
 
 const hours = new Array(12).fill(0).map((_, index) => ({ hour: `${index + 6}:00` }))
 
