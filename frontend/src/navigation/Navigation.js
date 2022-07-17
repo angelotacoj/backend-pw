@@ -40,14 +40,6 @@ const routes = [
     element: lazy(() => import('../pages/proximas-citas'))
   },
   {
-    path: 'horario-de-atencion',
-    element: lazy(() => import('../pages/horario-de-atencion'))
-  },
-  {
-    path: 'historial-de-citas',
-    element: lazy(() => import('../pages/historial-de-citas'))
-  },
-  {
     path: 'preguntas-pacientes',
     element: lazy(() => import('../pages/preguntas-pacientes'))
   },
@@ -55,10 +47,7 @@ const routes = [
     path: 'preguntas-publicas',
     element: lazy(() => import('../pages/preguntas-publicas'))
   },
-  {
-    path: 'calendario-de-citas',
-    element: lazy(() => import('../pages/calendario-de-citas'))
-  },
+ 
   {
     path: 'medios-de-pago',
     element: lazy(() => import('../pages/medios-de-pago'))
@@ -91,6 +80,58 @@ const routes = [
     path: 'tarjeta-pago',
     element: lazy(() => import('../pages/tarjeta-pago'))
   },
+
+
+  {
+    path: 'bandejas',
+    element: lazy(() => import('../pages/bandejas'))
+  },
+
+  {
+    path: 'buscar-medico',
+    element: lazy(() => import('../pages/buscar-medico'))
+  },
+  {
+    path: 'buzon',
+    element: lazy(() => import('../pages/buzon'))
+  },
+  {
+    path: 'calendario-de-citas',
+    element: lazy(() => import('../pages/calendario-de-citas'))
+  },
+  {
+    path: 'citas-paciente',
+    element: lazy(() => import('../pages/citas-paciente'))
+  },
+  {
+    path: 'editar-perfil',
+    element: lazy(() => import('../pages/editar-perfil'))
+  },
+  {
+    path: 'historial-citas-u',
+    element: lazy(() => import('../pages/historial-citas-u'))
+  },
+  {
+    path: 'historial-de-citas',
+    element: lazy(() => import('../pages/historial-de-citas'))
+  },
+  {
+    path: 'horario-de-atencion',
+    element: lazy(() => import('../pages/horario-de-atencion'))
+  },
+  {
+    path: 'info-paciente-medico',
+    element: lazy(() => import('../pages/info-paciente-medico'))
+  },
+  {
+    path: 'informacion-medico',
+    element: lazy(() => import('../pages/informacion-medico'))
+  },
+  
+
+
+
+
   {
     path: '*',
     element: () => <Navigate to={'/'} />
