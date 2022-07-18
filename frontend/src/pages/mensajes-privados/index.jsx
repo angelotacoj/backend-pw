@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
-//no hay nada de react
+
 const Pagina_MPRIV = () => {
+    const [Preguntas,SetPregunta]=useState({
+        dniPaciente : '',
+        nombreDoctor: '',
+        asunto: '',
+        mensaje: ''
+    })
+    const {dniPaciente,nombreDoctor,asunto,mensaje} = Preguntas;
+
+    const onInputChange = e => {SetPregunta({
+        ...Preguntas,[e.target.name]:e.target.value
+    })}
+
+
+    // const onSubmit = async e => {
+    //     await fetch("https://grupo6-backend-pw.herokuapp.com/foro",{
+    //         method: "POST",
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(
+    //             {
+    //                 CO_USR: 1,
+    //                 FORO_TIT: pregunta["FORO_TIT"],
+    //                 FORO_DESC: pregunta["FORO_DESC"] 
+    //             }
+    //         )
+    //     })
+    // };
     return (
         <main>
             <div>
@@ -38,17 +67,17 @@ const Pagina_MPRIV = () => {
 
                         <div id="columnas_superiores" className="row" >
                             <div className="col">
-                                De:  <input id="col11" type="text" placeholder="" />
+                                De:  <input id="col11" type="text" placeholder="" value={dniPaciente} onInputChange={e=>onInputChange(e)}/>
                             </div>
                             <div className="col">
-                                Para:  <input id="col11" type="text" placeholder="" />
+                                Para:  <input id="col11" type="text" placeholder="" value={nombreDoctor} onInputChange={e=>onInputChange(e)}/>
                             </div>
                             <div className="col d-flex flex-row-reverse" id="last_col" >
                                 <input id="col11" type="date" placeholder="" />
                             </div>
                         </div>
 
-                        <div id="asunto_text" >Asunto: <input id="asunto_box" type="text" placeholder="" />
+                        <div id="asunto_text" >Asunto: <input id="asunto_box" type="text" placeholder="" value={asunto} onInputChange={e=>onInputChange(e)}/>
                         </div>
 
                         <div>
@@ -56,7 +85,7 @@ const Pagina_MPRIV = () => {
                         </div>
 
                         <div  >
-                            <textarea id="texto_escrbir" rows="10" cols="30">
+                            <textarea id="texto_escrbir" rows="10" cols="30" value={mensaje} onInputChange={e=>onInputChange(e)}>
                             </textarea>
                         </div>
 
