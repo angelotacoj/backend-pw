@@ -27,6 +27,14 @@ module.exports = (sequelize, Sequelize) => {
           model: Especialidad,
           key: 'id'
         }
+      },
+      tipoAtencion: {
+        field: 'tipo',
+        type: Sequelize.STRING,
+      },
+      precioxConsulta: {
+        field: 'precio',
+        type: Sequelize.INTEGER
       }
     },
     { tableName: 'doctores', freezeTableName: true, timestamps: false, underscored: true }

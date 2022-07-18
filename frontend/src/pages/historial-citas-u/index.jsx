@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import FilaHistorial from "./components/FilaHistorial.component"
+import NavigationTo from '../../componets/NavigationTo'
 
 
 const Historial = [{medico:"Dra. GOMEZ TORRES, LUCIA",especialidad:"NEFROLOGÍA",paciente:"QUISPE AGUILAR, MARTIN",fecha:"DD MM YY",

@@ -6,6 +6,8 @@ import NavigationTo from '../../componets/NavigationTo'
 import useAutentication from '../../hooks/useAutentication'
 import useAppContext from '../../hooks/useAppContext'
 
+
+
 const RegistroPaciente = (props) => {
   const { registroPaciente } = useAutentication()
   const { setLoading } = useAppContext()
