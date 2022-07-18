@@ -2,7 +2,32 @@ import React from 'react'
 import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
-const Pagina_BUZ = () => {
+const buzon = new Array(10).fill(0).map((_, index) => ({
+    id: `${index + 1}`,
+    asunto: `${index + 1}`,
+    nombre: 'Ross',
+    apellido: 'Geller',
+    fecha: "18/07/2022",
+    mensaje:
+      'Este es un mensaje de la pantalla buzon privado'
+}))
+
+const ItemBuzon = ({asunto, nombre, apellido, fecha, mensaje}) => {
+    return(
+        <tr>
+            <td>{asunto}</td>
+            <td>
+                {apellido}, {nombre}
+            </td>
+            <td>{fecha}</td>
+            <td className="diagnostico_body">
+                {mensaje}
+            </td>
+        </tr>
+    )
+}
+
+const Pagina_BUZ = (props) => {
     return (
         <main>
             <section>
@@ -63,60 +88,12 @@ const Pagina_BUZ = () => {
                                     <th>Remitente</th>
                                     <th>Fecha de Atención</th>
                                     <th className="diagnostico_head" >Mensaje</th>
-
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td >Asunto</td>
-                                    <td>
-                                        APELLIDOS, NOMBRES
-                                    </td>
-                                    <td>DD MM YY | Hora</td>
-                                    <td className="diagnostico_body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Asunto</td>
-                                    <td>
-                                        APELLIDOS, NOMBRES
-                                    </td>
-                                    <td>DD MM YY | Hora</td>
-                                    <td className="diagnostico_body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Asunto</td>
-                                    <td>
-                                        APELLIDOS, NOMBRES
-                                    </td>
-                                    <td>DD MM YY | Hora</td>
-                                    <td className="diagnostico_body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Asunto</td>
-                                    <td>
-                                        APELLIDOS, NOMBRES
-                                    </td>
-                                    <td>DD MM YY | Hora</td>
-                                    <td className="diagnostico_body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Asunto</td>
-                                    <td >
-                                        APELLIDOS, NOMBRES
-                                    </td>
-                                    <td>DD MM YY | Hora</td>
-                                    <td className="diagnostico_body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex ut lacus imperdiet, in congue ipsum semper. Aenean
-                                    </td>
-                                </tr>
+                                    {buzon.map((asunto) => {
+                                    return <ItemBuzon key={asunto.id} {...asunto} />
+                                    })}
                                 </tbody>
                             </table>
 

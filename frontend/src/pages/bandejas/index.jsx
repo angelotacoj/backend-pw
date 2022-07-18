@@ -7,12 +7,11 @@ const bandeja = new Array(4).fill(0).map((_, index) => ({
     id: `${index + 1}`,
     nombre: 'Harry',
     apellido: 'Potter',
-    imagen: require('../../assets/1430453.png'),
     pregunta:
       'Preguntas de mensajes publicos'
 }))
 
-const ItemPregunta = ({ imagen, pregunta, nombre, apellido }) =>{
+const ItemPregunta = ({pregunta, nombre, apellido }) =>{
     return(
                     <div className="container card mt-2 " id="card-color">
                         <div className="card-body row borde" id="letra">
@@ -30,7 +29,7 @@ const ItemPregunta = ({ imagen, pregunta, nombre, apellido }) =>{
     )
 }
 
-const Pagina_BAND = () => {
+const Pagina_BAND = (props) => {
     return (
         <main>
             <section>
