@@ -3,7 +3,7 @@ import './index.css'
 import user from '../../assets/1430453.png'
 import NavigationTo from '../../componets/NavigationTo'
 
-const bandeja = new Array(3).fill(0).map((_, index) => ({
+const bandeja = new Array(4).fill(0).map((_, index) => ({
     id: `${index + 1}`,
     nombre: 'Harry',
     apellido: 'Potter',
