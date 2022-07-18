@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../../componets/NavigationTo'
 
 const CardOption = ({ href = '', tituloBoton = '', image = '' }) => {
   return (
@@ -11,7 +12,7 @@ const CardOption = ({ href = '', tituloBoton = '', image = '' }) => {
           <div className="row">
             <div className="col text-center">
               <button type="button" className="btn">
-                <a href={href}>{tituloBoton}</a>
+                <NavigationTo href={href}>{tituloBoton}</NavigationTo>
               </button>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 
@@ -50,16 +51,16 @@ const Pagina_RC = () => {
                         </div>
                         <div className="row justify-content-end pt-3 pb-2 ">
                             <div className="d-grid gap-2 col-md-2 mb-2">
-                                <div className="btn btna btn-success me-md-2 fs-5" to={"/"} onClick={corroborarCorreo} role="button">Recuperar</div>
+                                <NavigationTo href="/login"> <div className="btn btna btn-success me-md-2 fs-5" onClick={corroborarCorreo} role="button">Recuperar</div></NavigationTo>
                             </div>
                             <div className="d-grid gap-2 col-md-2 mb-2 ms-3">
-                                <div className="btn btna btn-danger me-md-2 fs-5" to={"/"} role="button">Cancelar</div>
+                                <NavigationTo href="/login"> <div className="btn btna btn-danger me-md-2 fs-5" role="button">Cancelar</div></NavigationTo>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     )
 }

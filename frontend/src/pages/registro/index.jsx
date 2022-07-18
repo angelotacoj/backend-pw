@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 const Registro = (props) => {
@@ -8,13 +9,13 @@ const Registro = (props) => {
         <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
           <div>
             <div className="container">
-              <a href="/" id="link-header">
+              <NavigationTo  href="/inicio" id="link-header">
                 Medico
-              </a>
+              </NavigationTo>
               /
-              <a href="#" id="link-header">
+              <NavigationTo href="#" id="link-header">
                 Editable
-              </a>
+              </NavigationTo>
             </div>
             <div className="container">
               <h2 className="header_titles" id="letra">
@@ -75,9 +76,9 @@ const Registro = (props) => {
             </div>
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
-            <a className="btn btn-primary" href="/" role="button">
+            <NavigationTo className="btn btn-primary" href="/inicio" role="button">
               Guardar
-            </a>
+            </NavigationTo>
           </div>
         </div>
       </div>

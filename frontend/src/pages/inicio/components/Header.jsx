@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../../componets/NavigationTo'
 
 const Header = ({ nombreEmpresa = '' }) => {
   return (
@@ -24,23 +25,23 @@ const Header = ({ nombreEmpresa = '' }) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item" />
-              <a
+              <NavigationTo
                 className="nav-link active h5"
                 aria-current="page"
                 href="/registro"
                 id="letra"
               >
                 Datos de contacto y precio
-              </a>
+              </NavigationTo>
               <li className="nav-item" />
-              <a
+              <NavigationTo
                 className="nav-link active h5"
                 aria-current="page"
                 href="/horario-de-atencion"
                 id="letra"
               >
                 Horario de atencion
-              </a>
+              </NavigationTo>
             </ul>
           </div>
           <div>

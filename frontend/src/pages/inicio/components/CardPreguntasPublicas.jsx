@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../../componets/NavigationTo'
 
 const CardPreguntasPublicas = (props) => {
   return (
@@ -45,7 +46,7 @@ const CardPreguntasPublicas = (props) => {
             <div>
               <div className="col text-center">
                 <button type="button" className="btn mb-3">
-                  <a href="/preguntas-publicas">Ver más</a>
+                  <NavigationTo href="/preguntas-publicas">Ver más</NavigationTo>
                 </button>
               </div>
             </div>

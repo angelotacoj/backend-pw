@@ -114,7 +114,7 @@ const InicioPaciente = () => {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle fs-5 color_letra" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Preguntas</a>
                                     <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item fs-5 color_letra" href="/buzon/buzon.html">Buzon privado</a></li>
+                                    <li><NavigationTo class="dropdown-item fs-5 color_letra" href="/buzon">Buzon privado</NavigationTo></li>
                                     <li><div class="dropdown-divider"/></li>
                                     <li><NavigationTo class="dropdown-item fs-5 color_letra" href="/bandejas">Bandeja publica</NavigationTo></li>
                                     </ul>
@@ -122,13 +122,13 @@ const InicioPaciente = () => {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle fs-5 color_letra" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Citas</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item fs-5 color_letra" href="/CitasPaciente/misCitas.html">Mis citas</a></li>
+                                        <li><NavigationTo class="dropdown-item fs-5 color_letra" href="/citas-paciente">Mis citas</NavigationTo></li>
                                         <li><div class="dropdown-divider"/></li>
-                                        <li><a class="dropdown-item fs-5 color_letra" href="/BuscarMedico/BuscarMedico.html">Agendar citas</a></li>
+                                        <li><NavigationTo class="dropdown-item fs-5 color_letra" href="/buscar-medico">Agendar citas</NavigationTo></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link fs-5" href="/EditarPerfil/Perfil.html">Editar datos</a>
+                                    <NavigationTo class="nav-link fs-5" href="/editar-perfil">Editar datos</NavigationTo>
                                     </li>
                             </ul>
                             <label class="form-label me-2 color_letra h5">
@@ -154,7 +154,7 @@ const InicioPaciente = () => {
                             </div>
                             <div class="row mx-auto">
                                 <div class="col">
-                                    <h5 class="sm-3"><a href="/HistorialCitas/HistorialCitas.html"> Historial de citas: </a> </h5>
+                                    <h5 class="sm-3"><NavigationTo href="/historial-citas-u"> Historial de citas: </NavigationTo> </h5>
                                     <div> Filtrar por: </div>    
                         <div class="fw-bold mt-2">Especialidad:</div>        
                         <div class="mb-5">

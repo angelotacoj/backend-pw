@@ -40,7 +40,7 @@ const Pagina_MP = () => {
                         </div>
                         <div id="Boton">
                             <button id="BotonTarjetaCredito" className="mt-5 btn btn--outline-secondary dropdown-toggle" type="button">
-                                <a href="/TarjetaPago/Tarjeta.html">Tarjeta de Crédito o Débito</a>
+                                <NavigationTo href="/tarjeta-pago">Tarjeta de Crédito o Débito</NavigationTo>
                             </button>
                         </div>
 
@@ -65,7 +65,7 @@ const Pagina_MP = () => {
 
                         <div id="Boton">
                             <button id="BotonPagar" className="mt-5 btn btn--outline-secondary" type="button" onClick={registrarMetodoPagoOnClick}>
-                                <a href="/CitasPaciente/misCitas.html" id="pagar">Pagar</a>
+                                <NavigationTo href="/citas-paciente" id="pagar">Pagar</NavigationTo>
                             </button>
                         </div>
                     </div>

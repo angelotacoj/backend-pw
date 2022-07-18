@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css'
-
+import NavigationTo from '../../componets/NavigationTo'
 //no hay nada de react
 const Pagina_MPUB = () => {
     return (
@@ -9,15 +9,12 @@ const Pagina_MPUB = () => {
                 <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
                     <div>
                         <div>
-                            <a className="nave ms-4" href="/InicioPaciente/InicioPaciente.html" id="letra">
+                            <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
                                 Paciente /
-                            </a>
-                            <a className="nave" href="#" id="letra">
-                                Preguntas /
-                            </a>
-                            <a className="nave" href="#" id="letra">
+                            </NavigationTo>
+                            <NavigationTo className="nave" href="#" id="letra">
                                 Preguntas Públicas
-                            </a>
+                            </NavigationTo>
                         </div>
                         <div className="ms-4">
                             <span className="navbar-brand h1" id="letra3">Crear Mensaje Público</span>
@@ -28,8 +25,8 @@ const Pagina_MPUB = () => {
 
             <section>
                 <div className="container button_mpub_row_rev">
-                    <a href="/bandeja/Bandeja_de_entrada.html" >
-                        <button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons" >Retroceder</button>	</a>
+                    <NavigationTo href="/bandejas">
+                        <button id="button_id" type="button" className="btn btn-btn-primary btn-lg color-buttons" >Retroceder</button>	</NavigationTo>
                 </div>
                 <div className="container">
                     <div className="border border-dark borde" id="caja" >
@@ -56,7 +53,7 @@ const Pagina_MPUB = () => {
                         </div>
 
                         <div id="pre_Sent color-buttons" >
-                            <a href="/bandeja/Bandeja_de_entrada.html" > <button id="sent" type="button" className="btn btn-primary btn-lg color-buttons" >Enviar Mensaje</button></a>
+                            <NavigationTo href="/bandejas" > <button id="sent" type="button" className="btn btn-primary btn-lg color-buttons" >Enviar Mensaje</button></NavigationTo>
                         </div>
 
                     </div>

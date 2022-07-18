@@ -26,14 +26,14 @@ const Inicio = () => {
                           <div>
                             <CardOption
                               tituloBoton="Próximas citas"
-                              href="proximas-citas"
+                              href="/proximas-citas"
                               image={require('../../assets/proximas_citas.jpeg')}
                             />
                           </div>
                           <div className="mt-4 mb-2">
                             <CardOption
                               tituloBoton="Historial citas"
-                              href="inicio-pac"
+                              href="/inicio-pac"
                               image={require('../../assets/historial_citas.jpg')}
                             />
                           </div>
@@ -46,14 +46,14 @@ const Inicio = () => {
                           <div>
                             <CardOption
                               tituloBoton="Calendario de citas"
-                              href="calendario-de-citas"
+                              href="/calendario-de-citas"
                               image={require('../../assets/calendario_citas.jpg')}
                             />
                           </div>
                           <div className="mt-4 mb-2">
                             <CardOption
                               tituloBoton="Preguntas de pacientes"
-                              href="preguntas-pacientes"
+                              href="/preguntas-pacientes"
                               image={require('../../assets/preguntas_pacientes.jpg')}
                             />
                           </div>

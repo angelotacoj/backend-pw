@@ -36,9 +36,9 @@ const BodyPM = (props) => {
     </div>
     <div className="text-center mt-4">
         <form method="get" action="/BuscarMedico/BuscarMedico.html">
-            {<div to="/iniciopaciente/BuscarMedico">
+            <NavigationTo href="/buscar-medico">
                 <button className="btn btn-outline-info">Aceptar</button>
-            </div>}
+            </NavigationTo>
         </form>
     </div>
     </>
