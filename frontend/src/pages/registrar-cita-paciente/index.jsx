@@ -2,6 +2,7 @@ import Calen_RCP from "./components/Calen_RCP"
 import doctor from '../../assets/medico.png'
 import "./index.css"
 import NavigationTo from "../../componets/NavigationTo"
+import Calendar from "../../componets/Calendar"
 
 const Pagina_RCP = () => {
     return (
@@ -30,7 +31,7 @@ const Pagina_RCP = () => {
                     </span>
                 </div>
             </section>
-            <Calen_RCP />
+            <Calendar/>
             <section>
                 <div className="register">
                     <NavigationTo href="/medios-de-pago"><button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reservar cita</button></NavigationTo>
