@@ -1,7 +1,7 @@
-import Calen_RCM from "./components/Calen_RCM"
 import doctor from '../../assets/medico.png'
 import "./index.css"
 import NavigationTo from "../../componets/NavigationTo"
+import Calendar from '../../componets/Calendar'
 
 const Pagina_RCM = () => {
     return (
@@ -30,7 +30,7 @@ const Pagina_RCM = () => {
                     </span>
                 </div>
             </section>
-            <Calen_RCM />
+            <Calendar/>
             <section>
                 <div className="register">
                     <button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reservar cita</button>
@@ -44,7 +44,6 @@ const Pagina_RCM = () => {
                             </div>
                             <div className="modal-footer flex-row">
                                 <NavigationTo href="/inicio"><button type="button" className="btn btn-success" data-bs-dismiss="modal">Cerrar</button></NavigationTo>
-
                             </div>
                         </div>
                     </div>
