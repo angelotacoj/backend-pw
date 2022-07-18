@@ -4,6 +4,7 @@ import amex from "../../assets/amex.png"
 import diner from "../../assets/diner.png"
 import mastercard from "../../assets/masterca.png"
 import visa from "../../assets/visa.png"
+import NavigationTo from '../../componets/NavigationTo'
 //import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const Pagina_TP = () => {
@@ -100,7 +101,7 @@ const Pagina_TP = () => {
 
                     <div id="Boton">
                         <button id="BotonAceptar" className="mt-5 btn btn--outline-secondary" type="button" onClick={registrarTarjetaClick}>
-                            <a href="/MetodoPago/MetodoPago.html" id="LetraBoton">Aceptar</a>
+                            <NavigationTo href="/metodo-pago" id="LetraBoton">Aceptar</NavigationTo>
                         </button>
                     </div>
 

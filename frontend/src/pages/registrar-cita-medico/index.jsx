@@ -12,9 +12,9 @@ const Pagina_RCM = () => {
             </section>
             <section>
                 <div className="btn_retroceder">
-                    <a href="../info_pac_med/info_pac_med.html">
+                    <NavigationTo href="/info-paciente-medico">
                         <button type="button" className="btn btn-secondary color-buttons">Retroceder</button>
-                    </a>
+                    </NavigationTo>
                 </div>
                 <div className="card_info">
                     <span>
@@ -42,7 +42,7 @@ const Pagina_RCM = () => {
                                 <h6 className="modal-title" id="staticBackdropLabel">Imprimiendo boleta. . .</h6>
                             </div>
                             <div className="modal-footer flex-row">
-                                <a href="/inicioMedico/inicioMedico.html"><button type="button" className="btn btn-success" data-bs-dismiss="modal">Cerrar</button></a>
+                                <NavigationTo href="/inicio"><button type="button" className="btn btn-success" data-bs-dismiss="modal">Cerrar</button></NavigationTo>
 
                             </div>
                         </div>

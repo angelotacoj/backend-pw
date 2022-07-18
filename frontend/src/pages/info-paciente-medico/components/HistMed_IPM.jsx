@@ -1,3 +1,5 @@
+import NavigationTo from "../../../componets/NavigationTo"
+
 const HistMed_IPM = () =>{
     return(
         <section>

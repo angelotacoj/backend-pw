@@ -2,18 +2,21 @@ import React from 'react'
 import './index.css'
 import BodyPM from "./components/BodyPM"
 import foto from "../../assets/medico.png"
+import NavigationTo from '../../componets/NavigationTo'
 
 //comment prueba 
 const PuntuarMedico = () => {
     return <>
-        <div className="card mb-5"  id="encabezado">
+        <div className="card mb-5" id="encabezado">
             <div className="card-header">
                 <div className="fs-5 ms-2">
-                    <a className="link" href="/InicioPaciente/InicioPaciente.html">Principal</a>
-                    /
-                    <a className="link" href="/HistorialCitas/HistorialCitas.html">Buscar Médico</a>
-                    /
-                    <a className="link" href="/HistorialCitas/HistorialCitas.html">Puntuar Médico</a>
+                    <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
+                        Principal /
+                    </NavigationTo>
+                        /
+                    <NavigationTo className="link" href="/buscar-medico">Buscar Médico</NavigationTo>
+                        /
+                    <NavigationTo className="link" href="#">Puntuar Médico</NavigationTo>
                 </div>
                 <div className="mt-2 mb-2 ms-2 fw-bold fs-1">
                     EMPRESA XYZ
@@ -21,7 +24,7 @@ const PuntuarMedico = () => {
             </div>
         </div>
 
-        <BodyPM medico = {"medico"} foto = {foto}/>
+        <BodyPM medico={"medico"} foto={foto} />
 
     </>
 }

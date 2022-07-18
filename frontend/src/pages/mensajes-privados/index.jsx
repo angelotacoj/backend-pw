@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 //no hay nada de react
@@ -9,12 +10,12 @@ const Pagina_MPRIV = () => {
                 <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
                     <div>
                         <div>
-                            <a className="nave ms-4" href="/InicioPaciente/InicioPaciente.html" id="letra">
+                            <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
                                 Paciente /
-                            </a>
-                            <a className="nave" href="#" id="letra">
+                            </NavigationTo>
+                            <NavigationTo className="nave" href="#" id="letra">
                                 Preguntas Privados
-                            </a>
+                            </NavigationTo>
                         </div>
                         <div className="ms-4">
                             <span className="navbar-brand h1" id="letra3">Crear Mensaje Privado</span>
@@ -25,9 +26,9 @@ const Pagina_MPRIV = () => {
 
             <div>
                 <div className="container button_mpriv_row_rev">
-                    <a href="/buzon/buzon.html" >
+                    <NavigationTo href="/inicio-paciente" >
                         <button id="button_id" type="button" className="btn btn-outline-dark btn-lg color-buttons"> Regresar</button>
-                    </a>
+                    </NavigationTo>
                 </div>
             </div>
 
@@ -60,7 +61,7 @@ const Pagina_MPRIV = () => {
                         </div>
 
                         <div id="pre_Sent color-buttons" >
-                            <a href="/buzon/buzon.html" > <button id="sent" type="button" className="btn btn-primary btn-lg color-buttons" >Enviar Mensaje</button></a>
+                            <NavigationTo href="/buzon" > <button id="sent" type="button" className="btn btn-primary btn-lg color-buttons" >Enviar Mensaje</button></NavigationTo>
                         </div>
 
                     </div>
