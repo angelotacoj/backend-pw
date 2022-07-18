@@ -68,7 +68,7 @@ const FilaHistorial = (props) => {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" className="btn btn-primary btnModal">Guardar puntuación</button>
+                                <button type="button" className="btn btn-primary btnModal" data-bs-dismiss="modal">Guardar puntuación</button>
                             </div>
                         </div>
                     </div>

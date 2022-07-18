@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import ButtonModal from './components/ButtonModal'
+import NavigationTo from '../../componets/NavigationTo'
 
 const hours = new Array(12).fill(0).map((_, index) => ({ hour: `${index + 6}:00` }))
 
@@ -11,13 +12,11 @@ const HorarioDeAtencion = (props) => {
         <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
           <div>
             <div className="container">
-              <a href="/" id="link-header">
-                Medico
-              </a>
+              <NavigationTo href="/inicio">Médico</NavigationTo>
               /
-              <a href="#" id="link-header">
+              <NavigationTo href="#" id="link-header">
                 Editable
-              </a>
+              </NavigationTo>
             </div>
             <div className="container">
               <h2 className="header_titles" id="letra">

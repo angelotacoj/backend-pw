@@ -1,6 +1,7 @@
 import Main_CP from "./components/Main_CP"
 import React from 'react'
 import './index.css'
+import NavigationTo from "../../componets/NavigationTo"
 
 const Historial = [
     {   medico:"Dr. AUGEDA PACHECO, GABRIEL",
@@ -46,9 +47,9 @@ const Pagina_CP = () => {
             <div className="card-header" id="encabezadoCita">
                 <h4>
                     <div>
-                        <a href="/InicioPaciente/InicioPaciente.html">Principal</a>
+                        <NavigationTo href="/inicio-paciente">Principal</NavigationTo>
                         /
-                        <a href="/CitasPaciente/misCitas.html">Mis citas</a>
+                        <NavigationTo href="#">Mis citas</NavigationTo>
                     </div>
                 </h4>
                 <h1 id="LetraCita">MIS CITAS</h1>

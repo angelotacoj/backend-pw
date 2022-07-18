@@ -13,9 +13,9 @@ const Pagina_BAND = () => {
                             <NavigationTo className="nave ms-4" href="/inicio-paciente" id="letra">
                                 Paciente /
                             </NavigationTo>
-                            <NavigationTo className="nave" href="#" id="letra">
+                            {/*<NavigationTo className="nave" href="#" id="letra">
                                 Preguntas /
-                            </NavigationTo>
+                            </NavigationTo>*/}
                             <NavigationTo className="nave" href="#" id="letra">
                                 Bandeja pública
                             </NavigationTo>

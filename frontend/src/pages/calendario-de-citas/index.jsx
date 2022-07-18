@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Calendar from '../../componets/Calendar'
+import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 const PreguntasPacientes = (props) => {
@@ -8,7 +9,7 @@ const PreguntasPacientes = (props) => {
     <>
       <header>
         <div className="header_subtitles">
-          <a href="/">Médico</a>/<a href="#">Calendario de citas</a>
+          <NavigationTo href="/inicio">Médico</NavigationTo>/<NavigationTo href="#">Calendario de citas</NavigationTo>
         </div>
         <h2 className="header_titles">Calendario de citas</h2>
       </header>
@@ -132,13 +133,13 @@ const PreguntasPacientes = (props) => {
                               >
                                 <div className="accordion-body">
                                   <div className="list-group">
-                                    <a
-                                      href="/info_pac_med/info_pac_med.html"
+                                    <NavigationTo
+                                      href="info-paciente-medico"
                                       className="list-group-item list-group-item-action active"
                                       aria-current="true"
                                     >
                                       Paciente 1
-                                    </a>
+                                    </NavigationTo>
                                     <a
                                       href="#"
                                       className="list-group-item list-group-item-action"
