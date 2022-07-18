@@ -7,11 +7,13 @@ const Header = (props) => {
       <nav className="navbar navbar-expand-lg navbar-light" id="nav-color">
         <div>
           <div className="container">
-            <NavigationTo href="/inicio">Médico</NavigationTo>
-              /
-            <NavigationTo href="#" id="link-header">
-              Próximas citas
+            <NavigationTo href="/" id="link-heNavigationToder">
+              Medico
             </NavigationTo>
+            /
+            <a href="#" id="link-header">
+              Próximas citas
+            </a>
           </div>
           <div className="container">
             <h2 className="header_titles" id="letra">

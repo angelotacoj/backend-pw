@@ -5,7 +5,7 @@ const initialState = {
   usuario: {
     apellidoMaterno: '',
     apellidoPaterno: '',
-    dni: '',
+    document: '',
     email: '',
     fechaNacimiento: '',
     imagen: '',

@@ -1,11 +1,8 @@
-const especialidadModel = require('./especialidad.model')
 const usuarioModel = require('./usuario.model')
+const especialidadModel = require('./especialidad.model')
 const horarioDoctorModel = require('./horarioDoctor.model.')
 
 module.exports = (sequelize, Sequelize) => {
-  const User = usuarioModel(sequelize, Sequelize)
-  const Especialidad = especialidadModel(sequelize, Sequelize)
-  const HorarioDoctor = horarioDoctorModel(sequelize, Sequelize)
   const Doctor = sequelize.define(
     'Doctor',
     {
@@ -15,8 +12,8 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
-          model: User,
-          key: 'dni'
+          model: 'usuarios',
+          key: 'document'
         }
       },
       especialidadId: {
@@ -24,22 +21,29 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: Especialidad,
+          model: 'especialidades',
           key: 'id'
         }
       },
-      tipoAtencion: {
-        field: 'tipo',
-        type: Sequelize.STRING,
+      precioVirtual: {
+        field: 'precio_virtual',
+        type: Sequelize.DOUBLE,
+        allowNull: true
       },
-      precioxConsulta: {
-        field: 'precio',
-        type: Sequelize.INTEGER
+      precioPresencial: {
+        field: 'precio_presencial',
+        type: Sequelize.DOUBLE,
+        allowNull: true
       }
     },
     { tableName: 'doctores', freezeTableName: true, timestamps: false, underscored: true }
   )
-  Doctor.belongsTo(User, {
+
+  const Usuario = usuarioModel(sequelize, Sequelize)
+  const Especialidad = especialidadModel(sequelize, Sequelize)
+  const HorarioDoctor = horarioDoctorModel(sequelize, Sequelize)
+
+  Doctor.belongsTo(Usuario, {
     as: 'usuario',
     foreignKey: 'codDoctor'
   })
@@ -52,5 +56,6 @@ module.exports = (sequelize, Sequelize) => {
     as: 'horarios',
     foreignKey: 'codDoctor'
   })
+
   return Doctor
 }

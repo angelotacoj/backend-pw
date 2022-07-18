@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  const Usuario = sequelize.define(
+  const Especialidad = sequelize.define(
     'Especialidad',
     {
       nombre: {
@@ -23,9 +23,10 @@ module.exports = (sequelize, Sequelize) => {
     {
       tableName: 'especialidades',
       timestamps: true,
-      underscored: true
+      underscored: true,
+      paranoid: true
     }
   )
 
-  return Usuario
+  return Especialidad
 }

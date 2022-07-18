@@ -1,8 +1,8 @@
-const db = require('../models/index.js')
+const db = require('../models')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const authConfig = require('../config/auth.config')
-const { sequelize } = require('../models/index.js')
+const { sequelize } = require('../models')
 
 const Usuario = db.usuarios
 const Doctor = db.doctores
@@ -10,16 +10,17 @@ const Paciente = db.pacientes
 
 exports.login = async (req, res) => {
   try {
-    let { dni, password } = req.body
+    let { document, password } = req.body
 
     // buscamos si el usuario existe
     const user = await Usuario.findOne({
       where: {
-        dni
-      }
+        document
+      },
+      include: ['doctor', 'paciente']
     })
     if (!user) {
-      res.status(404).json({ msg: 'Usuario con este dni no encontrado' })
+      res.status(404).json({ msg: 'Usuario con este document no encontrado' })
     } else {
       if (bcrypt.compareSync(password, user.password)) {
         // Creamos el token
@@ -47,7 +48,7 @@ exports.registroDoctor = async (req, res) => {
     // buscamos si el usuario existe
     const usuarioEncontrado = await Usuario.findOne({
       where: {
-        dni: req.body.dni
+        document: req.body.document
       }
     })
 
@@ -60,7 +61,7 @@ exports.registroDoctor = async (req, res) => {
     let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds))
 
     const user = await Usuario.create({
-      dni: req.body.dni,
+      document: req.body.document,
       nombre: req.body.nombre,
       apellidoPaterno: req.body.apellidoPaterno,
       apellidoMaterno: req.body.apellidoMaterno,
@@ -77,9 +78,12 @@ exports.registroDoctor = async (req, res) => {
     })
 
     await Doctor.create({
-      codDoctor: req.body.dni,
+      codDoctor: req.body.document,
       especialidadId: req.body.especialidadId
     })
+
+    await t.commit()
+
     res.json({
       user: user,
       token: token
@@ -95,7 +99,7 @@ exports.registroPaciente = async (req, res) => {
   try {
     const usuarioEncontrado = await Usuario.findOne({
       where: {
-        dni: req.body.dni
+        document: req.body.document
       }
     })
 
@@ -108,7 +112,7 @@ exports.registroPaciente = async (req, res) => {
     let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds))
 
     const user = await Usuario.create({
-      dni: req.body.dni,
+      document: req.body.document,
       nombre: req.body.nombre,
       apellidoPaterno: req.body.apellidoPaterno,
       apellidoMaterno: req.body.apellidoMaterno,
@@ -124,14 +128,16 @@ exports.registroPaciente = async (req, res) => {
     })
 
     Paciente.create({
-      codPaciente: req.body.dni
+      codPaciente: req.body.document
     })
+    await t.commit()
 
     res.json({
       user: user,
       token: token
     })
   } catch (error) {
+    console.log('error', error)
     res.status(500).json(error)
     await t.rollback()
   }

@@ -2,11 +2,17 @@ module.exports = (sequelize, Sequelize) => {
   const Usuario = sequelize.define(
     'Usuario',
     {
-      dni: {
+      document: {
         primaryKey: true,
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
+        validate: {
+          len: {
+            args: [8, 14],
+            msg: 'El documento tiene que tener minimamente 8 caracteres y maximo 14'
+          }
+        }
       },
       nombre: {
         type: Sequelize.STRING,
@@ -33,7 +39,8 @@ module.exports = (sequelize, Sequelize) => {
       imagen: { type: Sequelize.STRING },
       email: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        isEmail: { msg: 'email inválido' }
       },
       password: {
         type: Sequelize.STRING,
