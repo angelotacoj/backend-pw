@@ -21,7 +21,7 @@ db.sequelize = sequelize
 db.usuarios = require('./usuario.model')(sequelize, Sequelize)
 db.doctores = require('./doctor.model')(sequelize, Sequelize)
 db.pacientes = require('./paciente.model')(sequelize, Sequelize)
-db.expecialidades = require('./especialidad.model')(sequelize, Sequelize)
+db.especialidades = require('./especialidad.model')(sequelize, Sequelize)
 db.horariosDoctor = require('./horarioDoctor.model.')(sequelize, Sequelize)
 
 module.exports = db

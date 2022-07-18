@@ -1,54 +1,42 @@
-const especialidadModel = require('./especialidad.model')
+/*const especialidadModel = require('./especialidad.model')
 
 
 module.exports = (sequelize, Sequelize) => {
     const Especialidad = especialidadModel(sequelize, Sequelize)
     const Articulo = sequelize.define(
-      'Doctor',
+      'Articulo',
       {
-        codDoctor: {
-          field: 'cod_doctor',
+        idArticulo: {
+          field: 'id_articulo',
           primaryKey: true,
           type: Sequelize.STRING,
-          allowNull: false,
-          references: {
-            model: User,
-            key: 'dni'
-          }
+          allowNull: false
         },
         especialidadId: {
-          field: 'especialidad_id',
-          type: Sequelize.INTEGER,
-          allowNull: false,
-          references: {
-            model: Especialidad,
-            key: 'id'
-          }
+            field: 'especialidad_id',
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            references: {
+              model: Especialidad,
+              key: 'id'
+            }
+          },
+        src_image: {
+          field: 'src_image',
+          type: Sequelize.TEXT,
         },
-        tipoAtencion: {
-          field: 'tipo',
-          type: Sequelize.STRING,
-        },
-        precioxConsulta: {
-          field: 'precio',
-          type: Sequelize.INTEGER
+        texto: {
+          field: 'texto',
+          type: Sequelize.STRING
         }
       },
-      { tableName: 'doctores', freezeTableName: true, timestamps: false, underscored: true }
+      { tableName: 'articulos', freezeTableName: true, timestamps: false, underscored: true }
     )
-    Doctor.belongsTo(User, {
-      as: 'usuario',
-      foreignKey: 'codDoctor'
+    Articulo.belongsTo(Especialidad, {
+        as: 'especialidad',
+        foreignKey: 'especialidadId'
     })
-    Doctor.belongsTo(Especialidad, {
-      as: 'especialidad',
-      foreignKey: 'especialidadId'
-    })
-  
-    Doctor.hasMany(HorarioDoctor, {
-      as: 'horarios',
-      foreignKey: 'codDoctor'
-    })
-    return Doctor
+
+    return Articulo
   }
-  
+  */

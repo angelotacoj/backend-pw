@@ -16,7 +16,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const db = require('./app/models')
-
+const { Articulo } = require('./app/models/Xtra')
+const Articulos = Articulo
 db.sequelize
   .sync()
   .then(() => {
@@ -33,7 +34,11 @@ db.sequelize
 
 // simple route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to bezkoder application.' })
+  res.json({ message: 'Welcome to grupo1 application.' })
+})
+
+app.get("/articulos", async(req, res) => {
+  res.send(await Articulos.findAll())
 })
 
 require('./app/routes/auth.route')(app)
