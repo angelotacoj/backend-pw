@@ -42,7 +42,7 @@ const ArmarBody = () => {
 
 const Pagina_CP = () => {
     return<>
-    <div id="fondo">
+    <div>
     <div className="card">
             <div className="card-header" id="encabezadoCita">
                 <h4>
