@@ -1,226 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './index.css'
 import Header from './components/Header'
+import useDoctorInfo from '../../hooks/useDoctorInfo'
 
-const ProximasCitas = (props) => {
+const Cita = ({ nombre, fechaInicio, fechaFin, cita = {} }) => {
+  const { paciente = {} } = cita
   return (
-    <>
-      <Header />
-      <div className="container mt-2">
-        <div className="container card mt-2" id="fondo">
-          <div className="card-body row" id="letra">
-            <div className="col-md-3">
-              <label className="form-label h4">Buscar:</label>
-              <input type="text" className="form-control mt-2" />
-            </div>
-            <div className="col-md-8"></div>
-            <div className="col-md-1">
-              <label className="form-label">Mostrar</label>
-              <div className="dropdown">
-                <a
-                  className="btn btn-secondary dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  5
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      10
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      20
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      30
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <label className="form-label mt-2" id="letra">
-                Filas
-              </label>
-            </div>
-            <div className="table-responsive">
-              <table className="table text-center">
-                <tr>
-                  <th>Paciente</th>
-                  <th>Fecha de Atención</th>
-                </tr>
-                <tr>
-                  <td>APELLIDOS, NOMBRES</td>
-                  <td>DD MM YY | Hora</td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal2"
-                        href=""
-                      >
-                        Enviar Mensaje
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal3"
-                        href=""
-                      >
-                        Enviar Recordatorio
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>APELLIDOS, NOMBRES</td>
-                  <td>DD MM YY | Hora</td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal2"
-                        href=""
-                      >
-                        Enviar Mensaje
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal3"
-                        href=""
-                      >
-                        Enviar Recordatorio
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>APELLIDOS, NOMBRES</td>
-                  <td>DD MM YY | Hora</td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal2"
-                        href=""
-                      >
-                        Enviar Mensaje
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal3"
-                        href=""
-                      >
-                        Enviar Recordatorio
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>APELLIDOS, NOMBRES</td>
-                  <td>DD MM YY | Hora</td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal2"
-                        href=""
-                      >
-                        Enviar Mensaje
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal3"
-                        href=""
-                      >
-                        Enviar Recordatorio
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>APELLIDOS, NOMBRES</td>
-                  <td>DD MM YY | Hora</td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal2"
-                        href=""
-                      >
-                        Enviar Mensaje
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <a
-                        className="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal3"
-                        href=""
-                      >
-                        Enviar Recordatorio
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              <div className="container">
-                <nav>
-                  <ul className="pagination">
-                    <li className="page-item">
-                      <a className="page-link" href="#" id="letra">
-                        Antes
-                      </a>
-                    </li>
-                    <li className="page-item active">
-                      <a className="page-link" href="#">
-                        1
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#" id="letra">
-                        Siguiente
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+    <div className="container">
+      <div className="row d-flex p-3" style={{ minHeight: 100 }}>
+        <div class="col-sm">
+          <div>Paciente:</div>
+          <div>
+            {paciente.nombre} {paciente.apellidoPaterno} {paciente.apellidoMaterno}
           </div>
         </div>
+        <div class="col-sm">
+          <div>Inicio: {fechaInicio}</div>
+          <div>Fin: {fechaFin}</div>
+        </div>
+        <div class="col-sm">
+          <a
+            className="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+            href=""
+          >
+            Enviar Mensaje
+          </a>
+        </div>
+        <div class="col-sm">
+          <a
+            className="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal3"
+            href=""
+          >
+            Enviar Recordatorio
+          </a>
+        </div>
       </div>
+    </div>
+  )
+}
+
+{
+  /* <td>
+{paciente.nombre} {paciente.apellidoPaterno} {paciente.apellidoMaterno}
+</td>
+<td>Inicio: {fechaInicio}</td>
+<td>Fin: {fechaFin}</td>
+<td>
+<div>
+  <a
+    className="btn"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal2"
+    href=""
+  >
+    Enviar Mensaje
+  </a>
+</div>
+</td>
+<td>
+<div>
+  <a
+    className="btn"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal3"
+    href=""
+  >
+    Enviar Recordatorio
+  </a>
+</div>
+</td>
+</tr> */
+}
+
+const Modals = () => {
+  return (
+    <>
       <div
         className="modal fade"
         id="exampleModal2"
@@ -305,6 +163,65 @@ const ProximasCitas = (props) => {
           </div>
         </div>
       </div>
+    </>
+  )
+}
+const ProximasCitas = (props) => {
+  const { doctor } = useDoctorInfo()
+  const [searchText, setSeachText] = useState('')
+
+  const proximasCitas = doctor?.proximasCitas?.filter((item) => {
+    const paciente = item.cita?.paciente
+    const text =
+      `${paciente?.nombre} ${paciente?.apellidoMaterno} ${paciente?.apellidoPaterno}`.toLowerCase()
+    const textoBusqueda = searchText.toLowerCase()
+    if (!textoBusqueda) {
+      return true
+    }
+    return text.indexOf(textoBusqueda) !== -1
+  })
+
+  const onSearch = (text) => {
+    setSeachText(text)
+  }
+
+  return (
+    <>
+      <Header />
+      <div className="container mt-2">
+        <div className="container card mt-2" id="fondo">
+          <div className="card-body row" id="letra">
+            <div className="col-md-3">
+              <label className="form-label h4">Buscar:</label>
+              <input
+                type="text"
+                className="form-control mt-2"
+                value={searchText}
+                onChange={(e) => onSearch(e.target.value)}
+              />
+            </div>
+            <div className="col-md-8"></div>
+            <div className="col-md-1"></div>
+
+            <div className="overflow-auto">
+              {proximasCitas?.map((item) => {
+                return <Cita key={item.id} {...item} />
+              })}
+            </div>
+            {/* <div className="table-responsive">
+              <table className="table text-center">
+                <tr>
+                  <th>Paciente</th>
+                  <th>Fecha de Atención</th>
+                </tr>
+
+               
+              </table>
+            </div> */}
+          </div>
+        </div>
+      </div>
+      <Modals />
     </>
   )
 }

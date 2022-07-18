@@ -1,6 +1,6 @@
 import React from 'react'
-import './index.css'
 import NavigationTo from '../../componets/NavigationTo'
+import './index.css'
 
 const preguntas = new Array(5).fill(0).map((_, index) => ({
   id: `${index + 1}`,
@@ -97,9 +97,11 @@ const PreguntasPacientes = (props) => {
     <>
       <div id="rectanguloEncabezado">
         <div className="fs-5 ms-4">
-          <NavigationTo href="/inicio">Médico</NavigationTo>
+          <NavigationTo className="link" href="/">
+            Principal
+          </NavigationTo>
           /
-          <NavigationTo className="link" href="#">
+          <NavigationTo className="link" href="/preguntas-pacientes">
             Preguntas privadas de pacientes
           </NavigationTo>
         </div>

@@ -1,5 +1,3 @@
-const UsuarioModel = require('./usuario.model')
-
 module.exports = (sequelize, Sequelize) => {
   const Paciente = sequelize.define(
     'Paciente',
@@ -10,8 +8,8 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
-          model: UsuarioModel(sequelize, Sequelize),
-          key: 'dni'
+          model: 'usuarios',
+          key: 'document'
         }
       }
     },

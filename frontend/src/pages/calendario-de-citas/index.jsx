@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import Calendar from '../../componets/Calendar'
-import NavigationTo from '../../componets/NavigationTo'
 import './index.css'
 
 const PreguntasPacientes = (props) => {
@@ -9,12 +7,12 @@ const PreguntasPacientes = (props) => {
     <>
       <header>
         <div className="header_subtitles">
-          <NavigationTo href="/inicio">Médico</NavigationTo>/<NavigationTo href="#">Calendario de citas</NavigationTo>
+          <a href="/">Médico</a>/<a href="#">Calendario de citas</a>
         </div>
         <h2 className="header_titles">Calendario de citas</h2>
       </header>
       <main>
-        {/* <div className="btn_cal_citas">
+        <div className="btn_cal_citas">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +131,13 @@ const PreguntasPacientes = (props) => {
                               >
                                 <div className="accordion-body">
                                   <div className="list-group">
-                                    <NavigationTo
-                                      href="info-paciente-medico"
+                                    <a
+                                      href="/info_pac_med/info_pac_med.html"
                                       className="list-group-item list-group-item-action active"
                                       aria-current="true"
                                     >
                                       Paciente 1
-                                    </NavigationTo>
+                                    </a>
                                     <a
                                       href="#"
                                       className="list-group-item list-group-item-action"
@@ -344,8 +342,7 @@ const PreguntasPacientes = (props) => {
               </tr>
             </tbody>
           </table>
-        </div> */}
-        <Calendar/>
+        </div>
       </main>
     </>
   )

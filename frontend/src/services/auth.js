@@ -9,7 +9,7 @@ const useAuthService = () => {
       url,
       method: 'POST',
       data: {
-        dni: payload.document,
+        document: payload.document,
         password: payload.password
       }
     })
@@ -21,7 +21,7 @@ const useAuthService = () => {
       url,
       method: 'POST',
       data: {
-        dni: payload.dni,
+        document: payload.document,
         nombre: payload.nombre,
         apellidoPaterno: payload.apellidoPaterno,
         apellidoMaterno: payload.apellidoMaterno,
@@ -39,7 +39,7 @@ const useAuthService = () => {
       url,
       method: 'POST',
       data: {
-        dni: payload.dni,
+        document: payload.document,
         nombre: payload.nombre,
         apellidoPaterno: payload.apellidoPaterno,
         apellidoMaterno: payload.apellidoMaterno,

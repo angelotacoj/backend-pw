@@ -1,35 +1,32 @@
-const doctorModel = require('./doctor.model')
+const citaModel = require('./cita.model')
+const moment = require('moment')
 
 module.exports = (sequelize, Sequelize) => {
-  // const Doctor = DoctorModel(sequelize, Sequelize)
   const HorarioDoctor = sequelize.define(
     'HorarioDoctor',
     {
       codDoctor: {
         field: 'cod_doctor',
-        primaryKey: true,
         type: Sequelize.STRING,
-        allowNull: false
-        // references: {
-        //   model: Doctor,
-        //   key: 'codDoctor'
-        // }
+        allowNull: false,
+        references: {
+          model: 'doctores',
+          key: 'cod_doctor'
+        }
       },
-      dia: {
-        type: Sequelize.INTEGER,
-        allowNull: false
+      fechaInicio: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        get: function () {
+          return moment(this.getDataValue('fechaInicio')).format('YYYY-MM-DD HH:mm')
+        }
       },
-      hora: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      mes: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      anio: {
-        type: Sequelize.INTEGER,
-        allowNull: false
+      fechaFin: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        get: function () {
+          return moment(this.getDataValue('fechaFin')).format('YYYY-MM-DD HH:mm')
+        }
       },
       updatedAt: {
         field: 'updated_at',
@@ -41,8 +38,14 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: true
       }
     },
-    { tableName: 'horarios_doctor', underscored: true }
+    { tableName: 'horarios_doctor', underscored: true, paranoid: true }
   )
+  const Cita = citaModel(sequelize, Sequelize)
+
+  HorarioDoctor.hasOne(Cita, {
+    as: 'cita',
+    foreignKey: 'id_horario_doctor'
+  })
 
   return HorarioDoctor
 }

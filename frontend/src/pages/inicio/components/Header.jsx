@@ -28,7 +28,7 @@ const Header = ({ nombreEmpresa = '' }) => {
               <NavigationTo
                 className="nav-link active h5"
                 aria-current="page"
-                href="/registro"
+                href="/datos-de-contacto"
                 id="letra"
               >
                 Datos de contacto y precio
