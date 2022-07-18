@@ -1,2 +1,2 @@
-const db = require('../models/index.js')
+const db = require('../models/index.cjs')
 const Usuario = db.usuarios
