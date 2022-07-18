@@ -1,7 +1,7 @@
 import {DataTypes, Sequelize} from "sequelize";
 
 
-const db = require('../models')
+const db = require('./index.js')
 const Especialidad = db.especialidades
 
 const CADENA_CONEXION = "postgres://postgres:postgres@localhost:4000/postgres"

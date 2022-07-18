@@ -1,4 +1,4 @@
-const db = require('../models')
+const db = require('../models/index.js')
 const HorarioDoctor = db.horariosDoctor
 
 exports.index = async (req, res) => {

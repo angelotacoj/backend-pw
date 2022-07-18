@@ -1,8 +1,8 @@
-const db = require('../models')
+const db = require('../models/index.js')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const authConfig = require('../config/auth.config')
-const { sequelize } = require('../models')
+const { sequelize } = require('../models/index.js')
 
 const Usuario = db.usuarios
 const Doctor = db.doctores
