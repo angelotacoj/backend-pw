@@ -19,7 +19,7 @@ const Medico = (props) => {
                 </div>
                 <div className="divBtnCentrado">
                     <form method="get" action="/registrar_cita_pac/registrar_cita.html">
-                        <NavigationTo href="/horario-de-atencion"><button className="btn btn-info m-1">Ver horarios</button></NavigationTo>
+                        <NavigationTo href="/registrar-cita-paciente"><button className="btn btn-info m-1">Ver horarios</button></NavigationTo>
                     </form>
                 </div>
             </div>

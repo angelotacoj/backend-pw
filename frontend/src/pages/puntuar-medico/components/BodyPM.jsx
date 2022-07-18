@@ -1,3 +1,5 @@
+import NavigationTo from "../../../componets/NavigationTo"
+
 const BodyPM = (props) => {
     return <>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha385-AYmEC3Yw5cVb3ZcuHt0A93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>

@@ -126,6 +126,9 @@ const routes = [
   {
     path: 'informacion-medico',
     element: lazy(() => import('../pages/informacion-medico'))
+  },{
+    path: 'registro',
+    element: lazy(() => import('../pages/registro'))
   },
   
 

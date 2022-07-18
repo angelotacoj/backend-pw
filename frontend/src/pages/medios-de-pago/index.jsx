@@ -1,5 +1,6 @@
 import React from "react"
 import './index.css'
+import NavigationTo from "../../componets/NavigationTo"
 
 
 const Pagina_MP = () => {

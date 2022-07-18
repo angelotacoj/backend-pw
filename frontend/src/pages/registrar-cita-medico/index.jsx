@@ -1,6 +1,7 @@
 import Calen_RCM from "./components/Calen_RCM"
 import doctor from '../../assets/medico.png'
 import "./index.css"
+import NavigationTo from "../../componets/NavigationTo"
 
 const Pagina_RCM = () => {
     return (

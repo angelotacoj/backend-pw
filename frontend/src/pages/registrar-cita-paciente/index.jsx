@@ -33,7 +33,7 @@ const Pagina_RCP = () => {
             <Calen_RCP />
             <section>
                 <div className="register">
-                    <NavigationTo href="/metodo-pago"><button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reservar cita</button></NavigationTo>
+                    <NavigationTo href="/medios-de-pago"><button type="button" className="btn btn-success color-buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reservar cita</button></NavigationTo>
                 </div>
             </section>
         </main>
